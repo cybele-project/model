@@ -1,0 +1,1181 @@
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://w3id.org/cybele/component/id/crop__cropName> a qb:DimensionProperty;
+rdfs:comment "The name of crop that is cultivated.";
+rdfs:range xsd:string;
+rdfs:label "crop__cropName" .
+<https://w3id.org/cybele/component/id/crop__seed> a qb:DimensionProperty;
+rdfs:comment "The specific seed used for production of the crop.";
+rdfs:range xsd:string;
+rdfs:label "crop__seed" .
+<https://w3id.org/cybele/component/id/crop__seedVariety> a qb:DimensionProperty;
+rdfs:comment "The variety of the seed used in the crop.";
+rdfs:range xsd:string;
+rdfs:label "crop__seedVariety" .
+<https://w3id.org/cybele/component/id/crop__cultivationYear> a qb:DimensionProperty;
+rdfs:comment "The year when the crop was cultivated.";
+rdfs:range xsd:int;
+rdfs:label "crop__cultivationYear" .
+<https://w3id.org/cybele/component/id/crop__previousCultivation> a qb:DimensionProperty;
+rdfs:comment "The name of the crop cultivated last year.";
+rdfs:range xsd:string;
+rdfs:label "crop__previousCultivation" .
+<https://w3id.org/cybele/component/id/crop__seedUnits> a qb:MeasureProperty;
+rdfs:comment "The amount of seeds used for the cultivation of crop (raw material per ha).";
+rdfs:range xsd:double;
+rdfs:label "crop__seedUnits";
+sdmx-attribute:unitMeasure unit:KiloGM .
+<https://w3id.org/cybele/component/id/crop__manureAmount> rdfs:range xsd:double;
+rdfs:comment "The amount of manure used for crop cultivation (raw material per ha).";
+a qb:MeasureProperty;
+rdfs:label "crop__manureAmount";
+sdmx-attribute:unitMeasure unit:KiloGM .
+<https://w3id.org/cybele/component/id/crop__fertiliserAmount> a qb:MeasureProperty;
+rdfs:comment "The amount of fertiliser used for the cultivation of crop (raw material per ha).";
+rdfs:range xsd:double;
+rdfs:label "crop__fertiliserAmount";
+sdmx-attribute:unitMeasure unit:KiloGM .
+<https://w3id.org/cybele/component/id/crop__pesticideAmount> rdfs:comment "The amount of pesticide used for the cultivation of crop (raw material per ha).";
+a qb:MeasureProperty;
+rdfs:range xsd:double;
+rdfs:label "crop__pesticideAmount";
+sdmx-attribute:unitMeasure unit:KiloGM .
+<https://w3id.org/cybele/component/id/crop__tillageCost> a qb:MeasureProperty;
+rdfs:comment "The cost of tillage performed for the cultivation of crop (machinery and labour costs per ha).";
+rdfs:range xsd:double;
+rdfs:label "crop__tillageCost";
+sdmx-attribute:unitMeasure unit:Euro .
+<https://w3id.org/cybele/component/id/crop__sowingCost> a qb:MeasureProperty;
+rdfs:comment "The cost of sowing performed for the cultivation of crop (machinery and labour costs per ha).";
+rdfs:range xsd:double;
+rdfs:label "crop__sowingCost";
+sdmx-attribute:unitMeasure unit:Euro .
+<https://w3id.org/cybele/component/id/crop__fertiliserCost> a qb:MeasureProperty;
+rdfs:comment "The cost of fertiliser used for the cultivation of crop (machinery and labour costs per ha).";
+rdfs:range xsd:double;
+rdfs:label "crop__fertiliserCost";
+sdmx-attribute:unitMeasure unit:Euro .
+<https://w3id.org/cybele/component/id/crop__pesticideCost> a qb:MeasureProperty;
+rdfs:comment "The cost of pesticide used for the cultivation of crop (machinery and labour costs per ha).";
+rdfs:range xsd:double;
+rdfs:label "crop__pesticideCost";
+sdmx-attribute:unitMeasure unit:Euro .
+<https://w3id.org/cybele/component/id/crop__irrigationCost> a qb:MeasureProperty;
+rdfs:comment "The cost of irrigitation performed for the cultivation of crop (machinery and labour costs per ha).";
+rdfs:range xsd:double;
+rdfs:label "crop__irrigationCost";
+sdmx-attribute:unitMeasure unit:Euro .
+<https://w3id.org/cybele/component/id/crop__harvestCost> a qb:MeasureProperty;
+rdfs:comment "The cost of harvest performed for the cultivation of crop (machinery and labour costs per ha).";
+rdfs:range xsd:double;
+rdfs:label "crop__harvestCost";
+sdmx-attribute:unitMeasure unit:Euro .
+<https://w3id.org/cybele/component/id/crop__seedRawCost> a qb:MeasureProperty;
+rdfs:comment "The cost of seed used for the cultivation of crop (raw material per ha).";
+rdfs:range xsd:double;
+rdfs:label "crop__seedRawCost";
+sdmx-attribute:unitMeasure unit:Euro .
+<https://w3id.org/cybele/component/id/crop__fertiliserRawCost> a qb:MeasureProperty;
+rdfs:comment "The cost of fertiliser as raw material used for the cultivation of crop (per ha).";
+rdfs:range xsd:double;
+rdfs:label "crop__fertiliserRawCost";
+sdmx-attribute:unitMeasure unit:Euro .
+<https://w3id.org/cybele/component/id/crop__pesticideRawCost> rdfs:range xsd:double;
+sdmx-attribute:unitMeasure unit:Euro;
+rdfs:label "crop__pesticideRawCost";
+a qb:MeasureProperty;
+rdfs:comment "The cost of pesticide as raw material used for the cultivation of crop (per ha)." .
+<https://w3id.org/cybele/component/id/crop__yieldOutput> a qb:MeasureProperty;
+rdfs:comment "The yield output of the cultivated crop (in tons/ha).";
+rdfs:range xsd:double;
+rdfs:label "crop__yieldOutput";
+sdmx-attribute:unitMeasure unit:TONNE .
+<https://w3id.org/cybele/component/id/crop__proteinOutput> a qb:MeasureProperty;
+rdfs:comment "The protein output of the cultivated crop (in tons/ha).";
+rdfs:range xsd:double;
+rdfs:label "crop__proteinOutput";
+sdmx-attribute:unitMeasure unit:TONNE .
+<https://w3id.org/cybele/component/id/crop__sellPrice> a qb:MeasureProperty;
+rdfs:comment "The price that the cultivated crop is sold (per kg).";
+rdfs:range xsd:double;
+rdfs:label "crop__sellPrice";
+sdmx-attribute:unitMeasure unit:Euro .
+<https://w3id.org/cybele/component/id/crop__revenue> a qb:MeasureProperty;
+rdfs:comment "The revenue earned from the sale of the cultivated crop (per ha).";
+rdfs:range xsd:double;
+rdfs:label "crop__revenue";
+sdmx-attribute:unitMeasure unit:Euro .
+<https://w3id.org/cybele/component/id/crop__referenceDate> rdfs:range xsd:dateTime;
+rdfs:label "crop__referenceDate";
+a qb:DimensionProperty;
+rdfs:comment "The date when information was collected by an agriclimatic station for the plants of the crop." .
+<https://w3id.org/cybele/component/id/crop__chlorophyllIndexGreen> rdfs:comment "The Chlorophyll Index Green of plants of the crop.";
+a qb:MeasureProperty;
+rdfs:range xsd:double;
+rdfs:label "crop__chlorophyllIndexGreen" . 
+<https://w3id.org/cybele/component/id/crop__diseaseWaterStressIndex> a qb:MeasureProperty;
+rdfs:comment "The Disease Water Stress Index of plants of the crop.";
+rdfs:range xsd:double;
+rdfs:label "crop__diseaseWaterStressIndex" .
+<https://w3id.org/cybele/component/id/crop__enhancedVegetationIndex> a qb:MeasureProperty;
+rdfs:comment "The Enhanced Vegetation Index of plants of the crop.";
+rdfs:range xsd:double;
+rdfs:label "crop__enhancedVegetationIndex" .
+<https://w3id.org/cybele/component/id/crop__modifiedNormalizedDifferenceVegetationIndex> rdfs:comment "The modified normalized difference vegetation index of plants of the crop.";
+a qb:MeasureProperty;
+rdfs:range xsd:double;
+rdfs:label "crop__modifiedNormalizedDifferenceVegetationIndex" .
+<https://w3id.org/cybele/component/id/crop__moistureStressIndex> a qb:MeasureProperty;
+rdfs:comment "The Moisture Stress Index of plants of the crop.";
+rdfs:range xsd:double;
+rdfs:label "crop__moistureStressIndex" .
+<https://w3id.org/cybele/component/id/crop__normalizedDifferenceVegetationIndex> rdfs:range xsd:double;
+a qb:MeasureProperty;
+rdfs:comment "The normalized difference vegetation index of plants of the crop.";
+rdfs:label "crop__normalizedDifferenceVegetationIndex" .
+<https://w3id.org/cybele/component/id/crop__soilAdjustedVegetationIndex> a qb:MeasureProperty;
+rdfs:comment "The soil-adjusted vegetation index of plants of the crop.";
+rdfs:range xsd:double;
+rdfs:label "crop__soilAdjustedVegetationIndex" .
+<https://w3id.org/cybele/component/id/crop__BBCHScale> a qb:DimensionProperty;
+rdfs:comment "The phenological development stages of plants of the crop.";
+rdfs:range xsd:double;
+rdfs:label "crop__BBCHScale" .
+<https://w3id.org/cybele/component/id/crop__relatedField> a qb:DimensionProperty;
+rdfs:comment "The related field associated with a crop.";
+rdfs:range xsd:string;
+rdfs:label "crop__relatedField" .
+<https://w3id.org/cybele/component/id/crop__cropDescription> rdfs:comment "The complete description of the fruit crop.";
+rdfs:range xsd:string;
+rdfs:label "crop__cropDescription";
+a qb:DimensionProperty .
+<https://w3id.org/cybele/component/id/crop__periodicPlantBehaviour> a qb:DimensionProperty;
+rdfs:comment "The complete description of the fruit crop.";
+rdfs:range xsd:double;
+rdfs:label "crop__periodicPlantBehaviour" .
+<https://w3id.org/cybele/component/id/crop__phenology> a qb:DimensionProperty;
+rdfs:comment "The calculated phenology stage.";
+rdfs:range xsd:string;
+rdfs:label "crop__phenology" .
+<https://w3id.org/cybele/component/id/field__source> a qb:DimensionProperty;
+rdfs:comment "The source of the information for the field.";
+rdfs:range xsd:string;
+rdfs:label "field__source" .
+<https://w3id.org/cybele/component/id/field__parcel> a qb:DimensionProperty;
+rdfs:comment "The specific parcel of the field (denomination for an agricultural parcel identifier)";
+rdfs:range xsd:string;
+rdfs:label "field__parcel" .
+<https://w3id.org/cybele/component/id/field__area> a qb:DimensionProperty;
+rdfs:comment "The specific area where the field belongs to.";
+rdfs:range xsd:string;
+rdfs:label "field__area" .
+<https://w3id.org/cybele/component/id/field__latitude> a qb:DimensionProperty;
+rdfs:comment "The latitude of the field.";
+rdfs:range xsd:string;
+rdfs:label "field__latitude" .
+<https://w3id.org/cybele/component/id/field__longitude> a qb:DimensionProperty;
+rdfs:comment "The longitude of the field.";
+rdfs:range xsd:string;
+rdfs:label "field__longitude" .
+<https://w3id.org/cybele/component/id/field__polygon> a qb:DimensionProperty;
+rdfs:comment "The denomination for an agricultural polygon identifier. It contains parcels.";
+rdfs:range xsd:int;
+rdfs:label "field__polygon" .
+<https://w3id.org/cybele/component/id/field__subparcelIdentifier> a qb:DimensionProperty;
+rdfs:comment "The denomination for a small agricultural area identifier (enclosure).";
+rdfs:range xsd:int;
+rdfs:label "field__subparcelIdentifier" .
+<https://w3id.org/cybele/component/id/field__relatedWeather> a qb:DimensionProperty;
+rdfs:comment "The related weather conditions associated with a field.";
+rdfs:range xsd:string;
+rdfs:label "field__relatedWeather" .
+<https://w3id.org/cybele/component/id/field__vectorWKT> rdfs:comment "A vector WKY format for each polygon geometry (farm). This is an alternative vectorial mapping format easy to read for multiple open GIS software.";
+a qb:DimensionProperty;
+rdfs:range xsd:string;
+rdfs:label "field__vectorWKT" .
+<https://w3id.org/cybele/component/id/field__provinceIdentifier> a qb:DimensionProperty;
+rdfs:comment "An identifier for province, which is an administrative and political region.";
+rdfs:range xsd:int;
+rdfs:label "field__provinceIdentifier" .
+<https://w3id.org/cybele/component/id/field__municipalityIdentifier> a qb:DimensionProperty;
+rdfs:comment "An identifier for municipality, which is an administrative and political region.";
+rdfs:range xsd:int;
+rdfs:label "field__municipalityIdentifier" .
+<https://w3id.org/cybele/component/id/field__calculatedArea> rdfs:comment "The area calculated by GIS software.";
+a qb:MeasureProperty;
+rdfs:range xsd:int;
+rdfs:label "field__calculatedArea" .
+<https://w3id.org/cybele/component/id/field__plotIdentifier> rdfs:range xsd:int;
+rdfs:label "field__plotIdentifier";
+a qb:DimensionProperty;
+rdfs:comment "The unique parcel (plot) identifier." .
+<https://w3id.org/cybele/component/id/field__fruitIdentifier> a qb:DimensionProperty;
+rdfs:comment "The identifier of type of fruit.";
+rdfs:range xsd:int;
+rdfs:label "field__fruitIdentifier" .
+<https://w3id.org/cybele/component/id/field__geojsonVector> a qb:DimensionProperty;
+rdfs:comment "This is a vectorial mapping format easy to read for multiple open GIS software.";
+rdfs:range xsd:string;
+rdfs:label "field__geojsonVector" .
+<https://w3id.org/cybele/component/id/field__firstDayPredictionProbability> a qb:MeasureProperty;
+rdfs:comment "The prediction probability of the event in the first day.";
+rdfs:range xsd:double;
+rdfs:label "field__firstDayPredictionProbability" .
+<https://w3id.org/cybele/component/id/field__secondDayPredictionProbability> a qb:MeasureProperty;
+rdfs:comment "The prediction probability of the event in the second day.";
+rdfs:range xsd:double;
+rdfs:label "field__secondDayPredictionProbability" .
+<https://w3id.org/cybele/component/id/pigProfile__penIdentifier> rdfs:comment "The identifier of the pig pen.";
+a qb:DimensionProperty;
+rdfs:range xsd:string;
+rdfs:label "pigProfile__penIdentifier" .
+<https://w3id.org/cybele/component/id/pigProfile__pigID> a qb:DimensionProperty;
+rdfs:comment "The unique pig identity number or RFID tag (unique key per round/pen) or any other reference to a pig.";
+rdfs:range xsd:string;
+rdfs:label "pigProfile__pigID" .
+<https://w3id.org/cybele/component/id/pigProfile__relatedPigWeighing> a qb:MeasureProperty;
+rdfs:comment "The related weight measurements associated with a pig.";
+rdfs:range xsd:double;
+rdfs:label "pigProfile__relatedPigWeighing" .
+<https://w3id.org/cybele/component/id/pigProfile__relatedPigFarmingConditions> a qb:DimensionProperty;
+rdfs:comment "The related farming conditions associated with a pig.";
+rdfs:range xsd:string;
+rdfs:label "pigProfile__relatedPigFarmingConditions" .
+<https://w3id.org/cybele/component/id/pigProfile__relatedPigHealth> a qb:DimensionProperty;
+rdfs:comment "The related health of a pig.";
+rdfs:range xsd:string;
+rdfs:label "pigProfile__relatedPigHealth" .
+<https://w3id.org/cybele/component/id/pigProfile__relatedPigFeedingBehavior> rdfs:comment "The related feeding behavior of a pig.";
+a qb:DimensionProperty;
+rdfs:range xsd:string;
+rdfs:label "pigProfile__relatedPigFeedingBehavior" .
+<https://w3id.org/cybele/component/id/pigProfile__relatedPigMeatQuality> rdfs:comment "The related meat quality of a pig carcass.";
+a qb:DimensionProperty;
+rdfs:range xsd:string;
+rdfs:label "pigProfile__relatedPigMeatQuality" .
+<https://w3id.org/cybele/component/id/pigProfile__farmIdentifier> rdfs:comment "The farm identifier where the pig comes from.";
+a qb:DimensionProperty;
+rdfs:range xsd:double;
+rdfs:label "pigProfile__farmIdentifier" .
+<https://w3id.org/cybele/component/id/pigProfile__veterinaryInspection> a qb:MeasureProperty;
+rdfs:comment "A result of a veterinary inspection of pig carcass.";
+rdfs:range xsd:double;
+rdfs:label "pigProfile__veterinaryInspection" .
+
+<https://w3id.org/cybele/component/id/pigProfile__veterinaryInspection_1> a qb:MeasureProperty;
+rdfs:comment "A result of a veterinary inspection of pig carcass.";
+rdfs:range xsd:double;
+rdfs:label "pigProfile__veterinaryInspection_1" .
+<https://w3id.org/cybele/component/id/pigProfile__veterinaryInspection_2> a qb:MeasureProperty;
+rdfs:comment "A result of a veterinary inspection of pig carcass.";
+rdfs:range xsd:double;
+rdfs:label "pigProfile__veterinaryInspection_2" .
+<https://w3id.org/cybele/component/id/pigProfile__veterinaryInspection_3> a qb:MeasureProperty;
+rdfs:comment "A result of a veterinary inspection of pig carcass.";
+rdfs:range xsd:double;
+rdfs:label "pigProfile__veterinaryInspection_3" .
+
+
+<https://w3id.org/cybele/component/id/pigProfile__pigGender> a qb:DimensionProperty;
+rdfs:comment "The gender of the pig.";
+rdfs:range xsd:string;
+rdfs:label "pigProfile__pigGender";
+rdfs:comment "The gender of the pig.";
+a qb:DimensionProperty;
+rdfs:range xsd:string;
+rdfs:label "pigProfile__pigGender" .
+<https://w3id.org/cybele/component/id/weather__weatherConditionsStatus> rdfs:range xsd:string;
+rdfs:comment "An indication whether the weather conditions refer to a weather forecast or observed weather.";
+a qb:DimensionProperty;
+rdfs:label "weather__weatherConditionsStatus" .
+<https://w3id.org/cybele/component/id/weather__weatherConditionsIssueTime> a qb:DimensionProperty;
+rdfs:comment "The datetime when the weather condition report was issued.";
+rdfs:range xsd:dateTime;
+rdfs:label "weather__weatherConditionsIssueTime" .
+<https://w3id.org/cybele/component/id/weather__weatherConditionsDetails> rdfs:comment "A description of the weather condition report that may refer to drizzle, duststorm, flood, fog, frost, funnel cloud, hail, haze, ice crystals, ice pellets, mist, rain, sand, sandstorm, small hail and/or snow pellets, smoke, snow, snow grains, spray, squalls, tornado/waterspout, unknown precipitation, volcanic ash, well-developed dust/sand whirls, widespread dust.";
+rdfs:range xsd:string;
+a qb:DimensionProperty;
+rdfs:label "weather__weatherConditionsDetails" .
+<https://w3id.org/cybele/component/id/weather__averageAirTemperature> rdfs:label "weather__averageAirTemperature";
+a qb:MeasureProperty;
+rdfs:range xsd:double;
+rdfs:comment "The average air temperature in a specific field, as measured by an agriclimatic station.";
+sdmx-attribute:unitMeasure unit:DEG_C .
+<https://w3id.org/cybele/component/id/weather__maximumAirTemperature> a qb:MeasureProperty;
+rdfs:range xsd:double;
+rdfs:comment "The maximum air temperature in a specific field, as measured by an agriclimatic station.";
+rdfs:label "weather__maximumAirTemperature";
+sdmx-attribute:unitMeasure unit:DEG_C .
+<https://w3id.org/cybele/component/id/weather__minimumAirTemperature> a qb:MeasureProperty;
+rdfs:comment "The minimum air temperature in a specific field, as measured by an agriclimatic station.";
+rdfs:range xsd:double;
+rdfs:label "weather__minimumAirTemperature";
+sdmx-attribute:unitMeasure unit:DEG_C .
+<https://w3id.org/cybele/component/id/weather__maximumAirTemperatureOccurenceDate> a qb:DimensionProperty;
+rdfs:comment "The speficic timestamp when the maximum air temperature occured in a specific field, as measured by an agriclimatic station.";
+rdfs:range xsd:dateTime;
+rdfs:label "weather__maximumAirTemperatureOccurenceDate" .
+<https://w3id.org/cybele/component/id/weather__minimumAirTemperatureOccurenceDate> a qb:DimensionProperty;
+rdfs:comment "The speficic timestamp when the minimum air temperature occured in a specific field, as measured by an agriclimatic station.";
+rdfs:range xsd:dateTime;
+rdfs:label "weather__minimumAirTemperatureOccurenceDate" .
+<https://w3id.org/cybele/component/id/weather__accumulatedRainPrecipitation> a qb:MeasureProperty;
+rdfs:comment "The water that falls from the clouds towards the ground, especially as rain, in a specific field.";
+rdfs:range xsd:double;
+rdfs:label "weather__accumulatedRainPrecipitation";
+sdmx-attribute:unitMeasure unit:MilliM .
+<https://w3id.org/cybele/component/id/weather__effectivePrecipitation> rdfs:range xsd:double;
+rdfs:comment "The amount of precipitation that is actually absorbed and stored in the soil of a specific field.";
+a qb:MeasureProperty;
+rdfs:label "weather__effectivePrecipitation";
+sdmx-attribute:unitMeasure unit:MilliM .
+<https://w3id.org/cybele/component/id/weather__maximumRelativeHumidity> a qb:MeasureProperty;
+rdfs:comment "The maximum relative humidity in a specific field, as measured by an agriclimatic station.";
+rdfs:range xsd:double;
+rdfs:label "weather__maximumRelativeHumidity";
+sdmx-attribute:unitMeasure unit:PERCENT .
+<https://w3id.org/cybele/component/id/weather__minimumRelativeHumidity> rdfs:range xsd:double;
+a qb:MeasureProperty;
+rdfs:comment "The minimum relative humidity in a specific field, as measured by an agriclimatic station.";
+rdfs:label "weather__minimumRelativeHumidity";
+sdmx-attribute:unitMeasure unit:PERCENT .
+<https://w3id.org/cybele/component/id/weather__averageRelativeHumidity> a qb:MeasureProperty;
+rdfs:comment "The average relative humidity in a specific field, as measured by an agriclimatic station.";
+rdfs:range xsd:double;
+rdfs:label "weather__averageRelativeHumidity";
+sdmx-attribute:unitMeasure unit:PERCENT .
+<https://w3id.org/cybele/component/id/weather__maximumHumidityOccurenceDate> a qb:DimensionProperty;
+rdfs:comment "The speficic timestamp when the maximum humidity occured in a specific field, as measured by an agriclimatic station.";
+rdfs:range xsd:dateTime;
+rdfs:label "weather__maximumHumidityOccurenceDate" .
+<https://w3id.org/cybele/component/id/weather__minimumHumidityOccurenceDate> rdfs:comment "The speficic timestamp when the minimum humidity occured in a specific field, as measured by an agriclimatic station.";
+a qb:DimensionProperty;
+rdfs:range xsd:dateTime;
+rdfs:label "weather__minimumHumidityOccurenceDate" .
+<https://w3id.org/cybele/component/id/weather__windSpeed> a qb:MeasureProperty;
+rdfs:comment "The speed of the wind in the specific field as measured by the agriclimatic station.";
+rdfs:range xsd:double;
+rdfs:label "weather__windSpeed";
+sdmx-attribute:unitMeasure unit:M-PER-SEC .
+<https://w3id.org/cybele/component/id/weather__windSpeedDirection> a qb:MeasureProperty;
+rdfs:comment "The direction of the wind in the specific field as measured by the agriclimatic station.";
+rdfs:range xsd:double;
+rdfs:label "weather__windSpeedDirection";
+sdmx-attribute:unitMeasure unit:DEG .
+<https://w3id.org/cybele/component/id/weather__maximumWindSpeed> sdmx-attribute:unitMeasure unit:M-PER-SEC;
+rdfs:label "weather__maximumWindSpeed";
+a qb:MeasureProperty;
+rdfs:comment "The maximun speed of the wind in the specific field as measured by the agriclimatic station.";
+rdfs:range xsd:double .
+<https://w3id.org/cybele/component/id/weather__maximumWindSpeedOccurenceDate> rdfs:label "weather__maximumWindSpeedOccurenceDate";
+a qb:DimensionProperty;
+rdfs:comment "The timestamp when the maximum speed of the wind occured in the specific field as measured by the agriclimatic station.";
+rdfs:range xsd:dateTime .
+<https://w3id.org/cybele/component/id/weather__maximumWindSpeedDirection> a qb:MeasureProperty;
+rdfs:comment "The direction of the maximum speed of the wind that occured in the specific field as measured by the agriclimatic station.";
+rdfs:range xsd:double;
+rdfs:label "weather__maximumWindSpeedDirection";
+sdmx-attribute:unitMeasure unit:DEG .
+<https://w3id.org/cybele/component/id/weather__solarRadiation> a qb:MeasureProperty;
+rdfs:comment "The radiation emmitted by the sunlight during the day in a specific field as measured by an agriclimatic station (per square metre).";
+rdfs:range xsd:double;
+rdfs:label "weather__solarRadiation";
+sdmx-attribute:unitMeasure unit:MilliJ .
+<https://w3id.org/cybele/component/id/weather__solarRadiationReflection> rdfs:comment "The proportion of radiation emmitted by the sunlight that is reflected during the day in a specific field as measured by an agriclimatic station.";
+a qb:MeasureProperty;
+rdfs:range xsd:double;
+rdfs:label "weather__solarRadiationReflection" .
+<https://w3id.org/cybele/component/id/weather__potentialEvapotranspiration> rdfs:comment "The potential evapotranspiration occured in a specific field as measured by an agriclimatic station (per square metre).";
+a qb:MeasureProperty;
+rdfs:range xsd:double;
+rdfs:label "weather__potentialEvapotranspiration";
+sdmx-attribute:unitMeasure unit:L .
+<https://w3id.org/cybele/component/id/weather__actualEvapotranspiration> rdfs:label "weather__actualEvapotranspiration";
+a qb:MeasureProperty;
+rdfs:comment "The actual evapotranspiration occured in a specific field as measured by an agriclimatic station (per square metre).";
+rdfs:range xsd:double;
+sdmx-attribute:unitMeasure unit:L .
+<https://w3id.org/cybele/component/id/weather__landSurfaceTemperature> a qb:MeasureProperty;
+rdfs:comment "The temperature of the land surface in a specific field as measured by an agriclimatic station.";
+rdfs:range xsd:double;
+rdfs:label "weather__landSurfaceTemperature" .
+<https://w3id.org/cybele/component/id/weather__weatherProvinceID> a qb:DimensionProperty;
+rdfs:comment "The identifier of the province where the agriclimatic station is located.";
+rdfs:range xsd:string;
+rdfs:label "weather__weatherProvinceID" .
+<https://w3id.org/cybele/component/id/weather__agriclimaticStationID> a qb:DimensionProperty;
+rdfs:comment "The identifier of the agriclimatic station that takes the weather measurements.";
+rdfs:label "weather__agriclimaticStationID";
+rdfs:range xsd:string .
+<https://w3id.org/cybele/component/id/weather__weatherConditionOccurenceDate> a qb:DimensionProperty;
+rdfs:label "weather__weatherConditionOccurenceDate";
+rdfs:comment "The datetime when the weather measurement or an extreme weather event occured in a specific field as measured by an agriclimatic station.";
+rdfs:range xsd:dateTime .
+<https://w3id.org/cybele/component/id/weather__weatherConditionOccurenceNumberedDay> a qb:DimensionProperty;
+rdfs:comment "The numbered of the year (from 1 to 366) when the weather measurement or an extreme weather event occured in a specific field as measured by an agriclimatic station.";
+rdfs:range xsd:int;
+rdfs:label "weather__weatherConditionOccurenceNumberedDay" .
+<https://w3id.org/cybele/component/id/weather__weatherConditionOccurenceYear> a qb:DimensionProperty;
+rdfs:comment "The year when the weather measurement or an extreme weather event occured in a specific field as measured by an agriclimatic station.";
+rdfs:range xsd:int;
+rdfs:label "weather__weatherConditionOccurenceYear" .
+<https://w3id.org/cybele/component/id/weather__weatherConditionOccurenceMonth> a qb:DimensionProperty;
+rdfs:comment "The month when the weather measurement or an extreme weather event occured in a specific field as measured by an agriclimatic station.";
+rdfs:range xsd:int;
+rdfs:label "weather__weatherConditionOccurenceMonth" .
+<https://w3id.org/cybele/component/id/weather__weatherConditionOccurenceDay> a qb:DimensionProperty;
+rdfs:comment "The day when the weather measurement or an extreme weather event occured in a specific field as measured by an agriclimatic station.";
+rdfs:range xsd:int;
+rdfs:label "weather__weatherConditionOccurenceDay" .
+<https://w3id.org/cybele/component/id/pigFarmingConditions__uniqueMessageID> a qb:DimensionProperty;
+rdfs:comment "The unique identifier of the sensor message from the pig pen.";
+rdfs:range xsd:string;
+rdfs:label "pigFarmingConditions__uniqueMessageID" .
+<https://w3id.org/cybele/component/id/pigFarmingConditions__uniqueSensorID> rdfs:comment "The unique identifier of a sensor from the pig pen.";
+a qb:DimensionProperty;
+rdfs:range xsd:string;
+rdfs:label "pigFarmingConditions__uniqueSensorID" .
+<https://w3id.org/cybele/component/id/pigFarmingConditions__sensorName> rdfs:comment "The name of a sensor from the pig pen.";
+rdfs:range xsd:string;
+a qb:DimensionProperty;
+rdfs:label "pigFarmingConditions__sensorName" .
+<https://w3id.org/cybele/component/id/pigFarmingConditions__sensorValueTimestamp> a qb:DimensionProperty;
+rdfs:comment "The timestamp of the value measured by the sensor in the pig pen.";
+rdfs:range xsd:dateTime;
+rdfs:label "pigFarmingConditions__sensorValueTimestamp" .
+<https://w3id.org/cybele/component/id/pigFarmingConditions__sensorLuminosity> a qb:MeasureProperty;
+rdfs:comment "The luminosity value as measured by the sensor in the pig pen.";
+rdfs:range xsd:double;
+rdfs:label "pigFarmingConditions__sensorLuminosity";
+sdmx-attribute:unitMeasure unit:LUX .
+<https://w3id.org/cybele/component/id/pigFarmingConditions__sensorFormattedLuminosity> a qb:MeasureProperty;
+rdfs:comment "The value and relative unit of luminosity as measured by the sensor in the pig pen.";
+rdfs:range xsd:double;
+rdfs:label "pigFarmingConditions__sensorFormattedLuminosity";
+sdmx-attribute:unitMeasure unit:LUX .
+<https://w3id.org/cybele/component/id/pigFarmingConditions__sensorTemperature> a qb:MeasureProperty;
+rdfs:comment "The temperature value as measured by the sensor in the pig pen.";
+rdfs:range xsd:double;
+rdfs:label "pigFarmingConditions__sensorTemperature";
+sdmx-attribute:unitMeasure unit:DEG_C .
+<https://w3id.org/cybele/component/id/pigFarmingConditions__sensorFormattedTemperature> a qb:MeasureProperty;
+rdfs:comment "The value and relative unit of temperature as measured by the sensor in the pig pen.";
+rdfs:range xsd:double;
+rdfs:label "pigFarmingConditions__sensorFormattedTemperature";
+sdmx-attribute:unitMeasure unit:DEG_C .
+<https://w3id.org/cybele/component/id/pigFarmingConditions__sensorHumidity> a qb:MeasureProperty;
+rdfs:comment "The relative humidity value as measured by the sensor in the pig pen.";
+rdfs:range xsd:double;
+rdfs:label "pigFarmingConditions__sensorHumidity";
+sdmx-attribute:unitMeasure unit:PERCENT .
+<https://w3id.org/cybele/component/id/pigFarmingConditions__sensorFormattedHumidity> a qb:MeasureProperty;
+rdfs:comment "The value and relative unit of relative humidity as measured by the sensor in the pig pen.";
+rdfs:range xsd:double;
+rdfs:label "pigFarmingConditions__sensorFormattedHumidity";
+sdmx-attribute:unitMeasure unit:PERCENT .
+<https://w3id.org/cybele/component/id/pigFarmingConditions__sensorBatteryLife> a qb:MeasureProperty;
+rdfs:comment "The estimated remaining life of the battery of the sensor in the pig pen.";
+rdfs:range xsd:double;
+rdfs:label "pigFarmingConditions__sensorBatteryLife";
+sdmx-attribute:unitMeasure unit:PERCENT .
+<https://w3id.org/cybele/component/id/pigFarmingConditions__sensorState> rdfs:label "pigFarmingConditions__sensorState";
+a qb:DimensionProperty;
+rdfs:comment "The state of the sensor in the pig pen.";
+rdfs:range xsd:boolean .
+<https://w3id.org/cybele/component/id/pigFarmingConditions__sensorGatewayID> a qb:DimensionProperty;
+rdfs:comment "The identifier of the gateway of the sensor in the pig pen.";
+rdfs:range xsd:int;
+rdfs:label "pigFarmingConditions__sensorGatewayID" .
+<https://w3id.org/cybele/component/id/pigFarmingConditions__sensorAlert> a qb:DimensionProperty;
+rdfs:comment "A boolean indicating if the pig pen sensor reading triggered a notification.";
+rdfs:range xsd:boolean;
+rdfs:label "pigFarmingConditions__sensorAlert" .
+<https://w3id.org/cybele/component/id/pigFarmingConditions__sensorSignalStrength> a qb:MeasureProperty;
+rdfs:comment "The strength of communication signal between the sensor and the gateway in the pig pen.";
+rdfs:range xsd:int;
+rdfs:label "pigFarmingConditions__sensorSignalStrength";
+sdmx-attribute:unitMeasure unit:PERCENT .
+<https://w3id.org/cybele/component/id/pigFarmingConditions__sensorBatteryVoltage> rdfs:comment "The voltage measured at the pig pen sensor battery used to calculate battery percentage.";
+a qb:MeasureProperty;
+rdfs:range xsd:double;
+rdfs:label "pigFarmingConditions__sensorBatteryVoltage";
+sdmx-attribute:unitMeasure unit:V .
+<https://w3id.org/cybele/component/id/pigFarmingConditions__averageTemperatureHumidityIndex> rdfs:comment "The average temperature-humidity index in last hour in the pig pen.";
+a qb:MeasureProperty;
+rdfs:range xsd:double;
+rdfs:label "pigFarmingConditions__averageTemperatureHumidityIndex" .
+<https://w3id.org/cybele/component/id/pigHealth__healthObservationDate> a qb:DimensionProperty;
+rdfs:comment "The datetime of health observation or treatment of a pig in the pen.";
+rdfs:range xsd:dateTime;
+rdfs:label "pigHealth__healthObservationDate" .
+<https://w3id.org/cybele/component/id/pigHealth__healthObservation> rdfs:label "pigHealth__healthObservation";
+a qb:DimensionProperty;
+rdfs:range xsd:string;
+rdfs:comment "The description of observation or treatment of a pig in the pen." .
+<https://w3id.org/cybele/component/id/pigHealth__healthClassification> rdfs:comment "The classification of the health condition of a pig in the pen.";
+a qb:DimensionProperty;
+rdfs:range xsd:string;
+rdfs:label "pigHealth__healthClassification" .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__pigName> a qb:DimensionProperty;
+rdfs:comment "The name (apart from any RFID tag) of a pig in the pen.";
+rdfs:range xsd:string;
+rdfs:label "pigFeedingBehavior__pigName" .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__firstVisitDateTime> a qb:DimensionProperty;
+rdfs:comment "The timestamp of first registration of visit of the pig in the feeding/drinking area of pen.";
+rdfs:range xsd:dateTime;
+rdfs:label "pigFeedingBehavior__firstVisitDateTime" .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__lastVisitDateTime> a qb:DimensionProperty;
+rdfs:comment "The timestamp of last registration of visit of the pig in the feeding/drinking area of pen.";
+rdfs:range xsd:dateTime;
+rdfs:label "pigFeedingBehavior__lastVisitDateTime" .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__visitCycles> a qb:MeasureProperty;
+rdfs:comment "The number of registrations during visit of the pig in the feeding/drinking area of a pen.";
+rdfs:range xsd:int;
+rdfs:label "pigFeedingBehavior__visitCycles" .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__penAntennaPort> rdfs:comment "The input port of RFID antenna in the pig pen.";
+rdfs:range xsd:int;
+a qb:DimensionProperty;
+rdfs:label "pigFeedingBehavior__penAntennaPort" .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__penAntennaLocation> rdfs:comment "The location of RFID antenna in the pig pen.";
+a qb:DimensionProperty;
+rdfs:range xsd:string;
+rdfs:label "pigFeedingBehavior__penAntennaLocation" .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__lifeNumber> rdfs:range xsd:string;
+a qb:DimensionProperty;
+rdfs:comment "An optional identifier (manual input) of a pig in the pen.";
+rdfs:label "pigFeedingBehavior__lifeNumber" .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__animalNumber> a qb:DimensionProperty;
+rdfs:comment "A short identifier of a pig in the pen.";
+rdfs:range xsd:int;
+rdfs:label "pigFeedingBehavior__animalNumber" .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__penLocation> rdfs:label "pigFeedingBehavior__penLocation";
+a qb:DimensionProperty;
+rdfs:comment "The pen number (feeding station number).";
+rdfs:range xsd:string .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__feedingTimestamp> a qb:DimensionProperty;
+rdfs:comment "The timestamp of start of feeding visit of a pig in the pen.";
+rdfs:range xsd:dateTime;
+rdfs:label "pigFeedingBehavior__feedingTimestamp" .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__feedingDuration> a qb:MeasureProperty;
+rdfs:comment "The duration of feeding visit of a pig in the pen.";
+rdfs:range xsd:double;
+rdfs:label "pigFeedingBehavior__feedingDuration";
+sdmx-attribute:unitMeasure unit:SEC .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__feedingStationState> a qb:DimensionProperty;
+rdfs:comment "The indicator for the state of the feeding station.";
+rdfs:range xsd:string;
+rdfs:label "pigFeedingBehavior__feedingStationState" .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__feedingWeight> rdfs:comment "The median of weights of the pig measured during the feeding visit.";
+a qb:MeasureProperty;
+rdfs:range xsd:double;
+rdfs:label "pigFeedingBehavior__feedingWeight";
+sdmx-attribute:unitMeasure unit:GM .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__feedIntake> a qb:MeasureProperty;
+rdfs:comment "The feed intake of a pig during the feeding visit in grams.";
+rdfs:range xsd:double;
+rdfs:label "pigFeedingBehavior__feedIntake";
+sdmx-attribute:unitMeasure unit:GM .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__pigBirthDate> a qb:DimensionProperty;
+rdfs:comment "The birth date of the pig.";
+rdfs:range xsd:dateTime;
+rdfs:label "pigFeedingBehavior__pigBirthDate" .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__pigLeftHF> a qb:DimensionProperty;
+rdfs:comment "The identification code of left high frequency RFID tag of a pig in the pen.";
+rdfs:range xsd:string;
+rdfs:label "pigFeedingBehavior__pigLeftHF" .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__pigRightHF> rdfs:comment "The identification code of right high frequency RFID tag of a pig in the pen.";
+rdfs:range xsd:string;
+a qb:DimensionProperty;
+rdfs:label "pigFeedingBehavior__pigRightHF" .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__pigHF> rdfs:range xsd:string;
+a qb:DimensionProperty;
+rdfs:comment "The combination of identification codes of left and right high frequency RFID tag of a pig in the pen.";
+rdfs:label "pigFeedingBehavior__pigHF" .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__pigLF> a qb:DimensionProperty;
+rdfs:comment "The identification code of low frequency RFID tag of a pig in the pen.";
+rdfs:range xsd:string;
+rdfs:label "pigFeedingBehavior__pigLF" .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__startDate> a qb:DimensionProperty;
+rdfs:comment "The date that a pig was placed at current location.";
+rdfs:range xsd:dateTime;
+rdfs:label "pigFeedingBehavior__startDate" .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__endDate> a qb:DimensionProperty;
+rdfs:comment "The date that a pig was removed from current location.";
+rdfs:range xsd:dateTime;
+rdfs:label "pigFeedingBehavior__endDate" .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__individualLastHourFeederRegistrations> a qb:MeasureProperty;
+rdfs:comment "The number of registrations at the feeder in the last hour.";
+rdfs:range xsd:int;
+rdfs:label "pigFeedingBehavior__individualLastHourFeederRegistrations" .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__individualLastHourFeederVisits> a qb:MeasureProperty;
+rdfs:comment "The number of visits at the feeder in the last hour.";
+rdfs:range xsd:int;
+rdfs:label "pigFeedingBehavior__individualLastHourFeederVisits" .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__individualLastHourFeederDuration> a qb:MeasureProperty;
+rdfs:comment "The duration of time spent at the feeder in the last hour.";
+rdfs:range xsd:double;
+rdfs:label "pigFeedingBehavior__individualLastHourFeederDuration";
+sdmx-attribute:unitMeasure unit:SEC .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__individualLastHourFeedIntake> a qb:MeasureProperty;
+rdfs:comment "The feed intake in the last hour.";
+rdfs:range xsd:double;
+rdfs:label "pigFeedingBehavior__individualLastHourFeedIntake";
+sdmx-attribute:unitMeasure unit:GM .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__individualLastHourDrinkerRegistrations> a qb:MeasureProperty;
+rdfs:comment "The number of registrations at the drinker in the last hour.";
+rdfs:range xsd:int;
+rdfs:label "pigFeedingBehavior__individualLastHourDrinkerRegistrations" .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__individualLastHourDrinkerVisits> a qb:MeasureProperty;
+rdfs:comment "The number of visits at the drinker in the last hour.";
+rdfs:range xsd:int;
+rdfs:label "pigFeedingBehavior__individualLastHourDrinkerVisits" .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__individualLastHourDrinkerDuration> a qb:MeasureProperty;
+rdfs:comment "The duration of time spent at the drinker in the last hour.";
+rdfs:range xsd:double;
+rdfs:label "pigFeedingBehavior__individualLastHourDrinkerDuration";
+sdmx-attribute:unitMeasure unit:SEC .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__individualLastHourDrinkIntake> rdfs:range xsd:double;
+rdfs:comment "The water intake in the last hour.";
+a qb:MeasureProperty;
+rdfs:label "pigFeedingBehavior__individualLastHourDrinkIntake";
+sdmx-attribute:unitMeasure unit:GM .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__consecutiveFeederVisitsAverageTimeGap> a qb:MeasureProperty;
+rdfs:comment "The average time between consecutive feeding visits in the last 24h.";
+rdfs:range xsd:double;
+rdfs:label "pigFeedingBehavior__consecutiveFeederVisitsAverageTimeGap";
+sdmx-attribute:unitMeasure unit:SEC .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__consecutiveDrinkerVisitsAverageTimeGap> a qb:MeasureProperty;
+rdfs:comment "The average time between consecutive drinking visits in the last 24h.";
+rdfs:range xsd:double;
+rdfs:label "pigFeedingBehavior__consecutiveDrinkerVisitsAverageTimeGap";
+sdmx-attribute:unitMeasure unit:SEC .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__groupLastHourFeederRegistrations> a qb:MeasureProperty;
+rdfs:comment "The number of registrations at the feeder in the last hour.";
+rdfs:range xsd:int;
+rdfs:label "pigFeedingBehavior__groupLastHourFeederRegistrations" .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__groupLastHourFeederVisits> a qb:MeasureProperty;
+rdfs:comment "The number of visits at the feeder in the last hour.";
+rdfs:range xsd:int;
+rdfs:label "pigFeedingBehavior__groupLastHourFeederVisits" .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__groupLastHourFeederDuration> a qb:MeasureProperty;
+rdfs:comment "The duration of time spent at the feeder in the last hour.";
+rdfs:range xsd:double;
+rdfs:label "pigFeedingBehavior__groupLastHourFeederDuration";
+sdmx-attribute:unitMeasure unit:SEC .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__groupLastHourFeedIntake> rdfs:range xsd:double;
+a qb:MeasureProperty;
+rdfs:comment "The feed intake in the last hour.";
+rdfs:label "pigFeedingBehavior__groupLastHourFeedIntake";
+sdmx-attribute:unitMeasure unit:GM .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__groupLastHourDrinkerRegistrations> a qb:MeasureProperty;
+rdfs:comment "The number of registrations at the drinker in the last hour.";
+rdfs:range xsd:int;
+rdfs:label "pigFeedingBehavior__groupLastHourDrinkerRegistrations" .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__groupLastHourDrinkerVisits> a qb:MeasureProperty;
+rdfs:comment "The number of visits at the drinker in the last hour.";
+rdfs:range xsd:int;
+rdfs:label "pigFeedingBehavior__groupLastHourDrinkerVisits" .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__groupLastHourDrinkerDuration> a qb:MeasureProperty;
+rdfs:comment "The duration of time spent at the drinker in the last hour.";
+rdfs:range xsd:double;
+rdfs:label "pigFeedingBehavior__groupLastHourDrinkerDuration";
+sdmx-attribute:unitMeasure unit:SEC .
+<https://w3id.org/cybele/component/id/pigFeedingBehavior__groupLastHourDrinkIntake> a qb:MeasureProperty;
+rdfs:comment "The water intake in the last hour.";
+rdfs:range xsd:double;
+rdfs:label "pigFeedingBehavior__groupLastHourDrinkIntake";
+sdmx-attribute:unitMeasure unit:GM .
+<https://w3id.org/cybele/component/id/pigWeighing__meanWeight> rdfs:label "pigWeighing__meanWeight";
+a qb:MeasureProperty;
+rdfs:comment "The average weight of a pig from the different weight measurements.";
+rdfs:range xsd:double;
+sdmx-attribute:unitMeasure unit:KiloGM .
+<https://w3id.org/cybele/component/id/pigWeighing__standardDeviationWeight> a qb:MeasureProperty;
+rdfs:comment "The standard deviation of weight of a pig from the different weight measurements.";
+rdfs:range xsd:double;
+rdfs:label "pigWeighing__standardDeviationWeight";
+sdmx-attribute:unitMeasure unit:KiloGM .
+<https://w3id.org/cybele/component/id/pigWeighing__maximumWeight> a qb:MeasureProperty;
+rdfs:comment "The maximum weight of a pig from the different weight measurements.";
+rdfs:range xsd:double;
+rdfs:label "pigWeighing__maximumWeight";
+sdmx-attribute:unitMeasure unit:KiloGM .
+<https://w3id.org/cybele/component/id/pigWeighing__minimumWeight> sdmx-attribute:unitMeasure unit:KiloGM;
+rdfs:label "pigWeighing__minimumWeight";
+a qb:MeasureProperty;
+rdfs:comment "The minimum weight of a pig from the different weight measurements.";
+rdfs:range xsd:double .
+<https://w3id.org/cybele/component/id/pigWeighing__weighingDateTime> a qb:DimensionProperty;
+rdfs:comment "The timestamp of a specific weight measurement of a pig.";
+rdfs:range xsd:dateTime;
+rdfs:label "pigWeighing__weighingDateTime" .
+<https://w3id.org/cybele/component/id/pigWeighing__distinctWeightMeasurement> a qb:MeasureProperty;
+rdfs:comment "The specific weight measurement of a pig.";
+rdfs:range xsd:string;
+rdfs:label "pigWeighing__distinctWeightMeasurement";
+sdmx-attribute:unitMeasure unit:KiloGM .
+<https://w3id.org/cybele/component/id/pigWeighing__meanWeightGroup> a qb:MeasureProperty;
+rdfs:comment "The average weight of a pig in the group.";
+rdfs:range xsd:double;
+rdfs:label "pigWeighing__meanWeightGroup";
+sdmx-attribute:unitMeasure unit:KiloGM .
+<https://w3id.org/cybele/component/id/pigMeatQuality__carcassIdentifier> a qb:DimensionProperty;
+rdfs:comment "The identifier of the pig carcass in the trial for meat quality.";
+rdfs:range xsd:string;
+rdfs:label "pigMeatQuality__carcassIdentifier" .
+<https://w3id.org/cybele/component/id/pigMeatQuality__carcassNumber> a qb:DimensionProperty;
+rdfs:comment "The number of the pig carcass in the trial for meat quality.";
+rdfs:range xsd:string;
+rdfs:label "pigMeatQuality__carcassNumber" .
+<https://w3id.org/cybele/component/id/pigMeatQuality__scanValueL> a qb:MeasureProperty;
+rdfs:comment "The average Cielab lightness value at scan on the muscle level.";
+rdfs:range xsd:double;
+rdfs:label "pigMeatQuality__scanValueL" .
+<https://w3id.org/cybele/component/id/pigMeatQuality__scanValueA> a qb:MeasureProperty;
+rdfs:comment "The average A Cielab value at scan on the muscle level.";
+rdfs:range xsd:double;
+rdfs:label "pigMeatQuality__scanValueA" .
+<https://w3id.org/cybele/component/id/pigMeatQuality__scanValueB> a qb:MeasureProperty;
+rdfs:comment "The average B Cielab value at scan on the muscle level.";
+rdfs:range xsd:double;
+rdfs:label "pigMeatQuality__scanValueB" .
+<https://w3id.org/cybele/component/id/pigMeatQuality__scanValuePH> a qb:MeasureProperty;
+rdfs:comment "The PH value at scan on the muscle level.";
+rdfs:range xsd:double;
+rdfs:label "pigMeatQuality__scanValuePH" .
+<https://w3id.org/cybele/component/id/pigMeatQuality__scanValuePH1> a qb:MeasureProperty;
+rdfs:comment "The value of pH 35 minutes after slaughter in the Longissium Dorsi.";
+rdfs:range xsd:double;
+rdfs:label "pigMeatQuality__scanValuePH1" .
+<https://w3id.org/cybele/component/id/pigMeatQuality__scanValuePH24> a qb:MeasureProperty;
+rdfs:comment "The average pH value 24 hours after slaughter from 3 measurements on the muscle.";
+rdfs:range xsd:double;
+rdfs:label "pigMeatQuality__scanValuePH24" .
+<https://w3id.org/cybele/component/id/pigMeatQuality__cielabValueL> rdfs:comment "The average Cielab L value 24 hours after slaughter and after blooming to the air for 30 minutes on the muscle level.";
+a qb:MeasureProperty;
+rdfs:range xsd:double;
+rdfs:label "pigMeatQuality__cielabValueL" .
+<https://w3id.org/cybele/component/id/pigMeatQuality__cielabValueA> rdfs:comment "The average Cielab green-red value after 24 hours and blooming to the air for 30 minutes on the muscle level.";
+a qb:MeasureProperty;
+rdfs:range xsd:double;
+rdfs:label "pigMeatQuality__cielabValueA" .
+<https://w3id.org/cybele/component/id/pigMeatQuality__cielabValueB> a qb:MeasureProperty;
+rdfs:label "pigMeatQuality__cielabValueB";
+rdfs:comment "The average Cielab blue-yellow value after 24 hours and blooming to the air for 30 minutes on the muscle level.";
+rdfs:range xsd:double .
+<https://w3id.org/cybele/component/id/pigMeatQuality__muscleDrip> a qb:MeasureProperty;
+rdfs:comment "The drip value of the muscle (% weight loss in 48 hours).";
+rdfs:label "pigMeatQuality__muscleDrip";
+rdfs:range xsd:double .
+<https://w3id.org/cybele/component/id/pigMeatQuality__shearForce> a qb:MeasureProperty;
+rdfs:comment "The shear force indicating the structural strength of the meat after cooking.";
+rdfs:range xsd:double;
+rdfs:label "pigMeatQuality__shearForce" .
+<https://w3id.org/cybele/component/id/pigMeatQuality__intraMuscularFat> a qb:MeasureProperty;
+rdfs:comment "The Intra-Muscular Fat content.";
+rdfs:range xsd:double;
+rdfs:label "pigMeatQuality__intraMuscularFat";
+sdmx-attribute:unitMeasure unit:GM .
+<https://w3id.org/cybele/component/id/pigMeatQuality__dryMatter> a qb:MeasureProperty;
+rdfs:comment "The percentage of dry matter of the meat.";
+rdfs:range xsd:double;
+rdfs:label "pigMeatQuality__dryMatter";
+sdmx-attribute:unitMeasure unit:PERCENT .
+<https://w3id.org/cybele/component/id/pigMeatQuality__crudeProtein> a qb:MeasureProperty;
+rdfs:comment "The percentage of crude protein of the meat.";
+rdfs:range xsd:double;
+rdfs:label "pigMeatQuality__crudeProtein";
+sdmx-attribute:unitMeasure unit:PERCENT .
+<https://w3id.org/cybele/component/id/pigMeatQuality__cookingLoss> a qb:MeasureProperty;
+rdfs:comment "The percentage of weight loss after cooking and cooling.";
+rdfs:range xsd:double;
+rdfs:label "pigMeatQuality__cookingLoss";
+sdmx-attribute:unitMeasure unit:PERCENT .
+<https://w3id.org/cybele/component/id/pigMeatQuality__thawingLoss> a qb:MeasureProperty;
+rdfs:comment "The percentage of weight loss after cooking and cooling, but also using the weight loss after the samples were defrosted before cooking.";
+rdfs:range xsd:double;
+rdfs:label "pigMeatQuality__thawingLoss";
+sdmx-attribute:unitMeasure unit:PERCENT .
+<https://w3id.org/cybele/component/id/pigMeatQuality__sarcomereLength> a qb:MeasureProperty;
+rdfs:comment "The sarcomere length of the pig meat.";
+rdfs:range xsd:double;
+rdfs:label "pigMeatQuality__sarcomereLength";
+sdmx-attribute:unitMeasure unit:CentiM .
+<https://w3id.org/cybele/component/id/pigMeatQuality__totalCollagen> a qb:MeasureProperty;
+rdfs:comment "The percentage of collagen tissue in the pig meat.";
+rdfs:range xsd:double;
+rdfs:label "pigMeatQuality__totalCollagen";
+sdmx-attribute:unitMeasure unit:PERCENT .
+<https://w3id.org/cybele/component/id/pigMeatQuality__solubleCollagen> a qb:MeasureProperty;
+rdfs:comment "The percentage of collagen that is soluble compared to the total collagen in the pig meat.";
+rdfs:range xsd:double;
+rdfs:label "pigMeatQuality__solubleCollagen";
+sdmx-attribute:unitMeasure unit:PERCENT .
+<https://w3id.org/cybele/component/id/pigMeatQuality__slaughterDate> a qb:DimensionProperty;
+rdfs:comment "The date of slaughter.";
+rdfs:range xsd:dateTime;
+rdfs:label "pigMeatQuality__slaughterDate" .
+<https://w3id.org/cybele/component/id/pigMeatQuality__slaughterLocation> a qb:DimensionProperty;
+rdfs:comment "The location of slaughter.";
+rdfs:range xsd:double;
+rdfs:label "pigMeatQuality__slaughterLocation" .
+<https://w3id.org/cybele/component/id/pigMeatQuality__carcassWeight> a qb:MeasureProperty;
+rdfs:comment "The recorded weight of a pig carcass.";
+rdfs:range xsd:double;
+rdfs:label "pigMeatQuality__carcassWeight";
+sdmx-attribute:unitMeasure unit:KiloGM .
+<https://w3id.org/cybele/component/id/pigMeatQuality__rejectedWeight> a qb:MeasureProperty;
+rdfs:comment "The rejected weight of a pig carcass.";
+rdfs:range xsd:double;
+rdfs:label "pigMeatQuality__rejectedWeight";
+sdmx-attribute:unitMeasure unit:KiloGM .
+<https://w3id.org/cybele/component/id/pigMeatQuality__fatThickness> a qb:MeasureProperty;
+rdfs:comment "The thickness of the fatlayer of pig carcass.";
+rdfs:range xsd:double;
+rdfs:label "pigMeatQuality__fatThickness";
+sdmx-attribute:unitMeasure unit:CentiM .
+<https://w3id.org/cybele/component/id/pigMeatQuality__meatPercentage> sdmx-attribute:unitMeasure unit:PERCENT;
+rdfs:label "pigMeatQuality__meatPercentage";
+a qb:MeasureProperty;
+rdfs:comment "The percentage of meat in a pig carcass.";
+rdfs:range xsd:double .
+<https://w3id.org/cybele/component/id/pigMeatQuality__carcassCompositionMeasure> a qb:MeasureProperty;
+rdfs:comment "A composition measurement of a pig carcass";
+rdfs:range xsd:double;
+rdfs:label "pigMeatQuality__carcassCompositionMeasure" .
+
+<https://w3id.org/cybele/component/id/pigMeatQuality__carcassCompositionMeasure_1> a qb:MeasureProperty;
+rdfs:comment "A composition measurement of a pig carcass";
+rdfs:range xsd:double;
+rdfs:label "pigMeatQuality__carcassCompositionMeasure_1" .
+<https://w3id.org/cybele/component/id/pigMeatQuality__carcassCompositionMeasure_2> a qb:MeasureProperty;
+rdfs:comment "A composition measurement of a pig carcass";
+rdfs:range xsd:double;
+rdfs:label "pigMeatQuality__carcassCompositionMeasure_2" .
+<https://w3id.org/cybele/component/id/pigMeatQuality__carcassCompositionMeasure_3> a qb:MeasureProperty;
+rdfs:comment "A composition measurement of a pig carcass";
+rdfs:range xsd:double;
+rdfs:label "pigMeatQuality__carcassCompositionMeasure3" .
+<https://w3id.org/cybele/component/id/pigMeatQuality__carcassCompositionMeasure_4> a qb:MeasureProperty;
+rdfs:comment "A composition measurement of a pig carcass";
+rdfs:range xsd:double;
+rdfs:label "pigMeatQuality__carcassCompositionMeasure_4" .
+
+<https://w3id.org/cybele/component/id/pigMeatQuality__reflectionValue> a qb:MeasureProperty;
+rdfs:comment "A value collected from hyperspectal meat quality analysis";
+rdfs:range xsd:double;
+rdfs:label "pigMeatQuality__reflectionValue" .
+<https://w3id.org/cybele/component/id/pigMeatQuality__scanningOrder> a qb:DimensionProperty;
+rdfs:comment "The order number in hyperspectral scanning of pig carcass.";
+rdfs:range xsd:int;
+rdfs:label "pigMeatQuality__scanningOrder" .
+<https://w3id.org/cybele/component/id/pigMeatQuality__earlierScanningOrder> a qb:DimensionProperty;
+rdfs:comment "The order number in a previous hyperspectral scanning of pig carcass.";
+rdfs:range xsd:int;
+rdfs:label "pigMeatQuality__earlierScanningOrder" .
+<https://w3id.org/cybele/component/id/pigMeatQuality__sampleNumber> rdfs:range xsd:int;
+a qb:MeasureProperty;
+rdfs:comment "A sample number of the hyperspectral scanning of pig carcass.";
+rdfs:label "pigMeatQuality__sampleNumber";
+a qb:DimensionProperty;
+rdfs:comment "A sample number of the hyperspectral scanning of pig carcass.";
+rdfs:range xsd:int;
+rdfs:label "pigMeatQuality__sampleNumber" .
+<https://w3id.org/cybele/component/id/pigMeatQuality__meatMoisture> a qb:MeasureProperty;
+rdfs:comment "The moisture observed in the hyperspectral scanning of pig carcass.";
+rdfs:range xsd:int;
+rdfs:label "pigMeatQuality__meatMoisture" .
+<https://w3id.org/cybele/component/id/pigMeatQuality__filename> a qb:DimensionProperty;
+rdfs:comment "The name of the file related with the hyperspectral scanning of pig carcass.";
+rdfs:range xsd:string;
+rdfs:label "pigMeatQuality__filename" .
+<https://w3id.org/cybele/component/id/openSeaFishing__tripID> a qb:DimensionProperty;
+rdfs:comment "The identification number of the fishing trip.";
+rdfs:range xsd:string;
+rdfs:label "openSeaFishing__tripID" .
+<https://w3id.org/cybele/component/id/openSeaFishing__vesselID> a qb:DimensionProperty;
+rdfs:comment "The identification number of the fishing vessel.";
+rdfs:range xsd:string;
+rdfs:label "openSeaFishing__vesselID" .
+<https://w3id.org/cybele/component/id/openSeaFishing__tripDate> a qb:DimensionProperty;
+rdfs:range xsd:dateTime;
+rdfs:comment "A specific datetime of the fishing trip.";
+rdfs:label "openSeaFishing__tripDate" .
+<https://w3id.org/cybele/component/id/openSeaFishing__ICESStatisticalRectangle> a qb:DimensionProperty;
+rdfs:comment "The specific ICES Statistical Rectangle that is examined in the fishing trip.";
+rdfs:range xsd:string;
+rdfs:label "openSeaFishing__ICESStatisticalRectangle" .
+<https://w3id.org/cybele/component/id/openSeaFishing__ICESDivision> rdfs:range xsd:string;
+rdfs:comment "The specific ICES division that is examined in the fishing trip.";
+a qb:DimensionProperty;
+rdfs:label "openSeaFishing__ICESDivision" .
+<https://w3id.org/cybele/component/id/openSeaFishing__fishingHours> a qb:MeasureProperty;
+rdfs:comment "The total hours of fishing during the fishing trip";
+rdfs:range xsd:double;
+rdfs:label "openSeaFishing__fishingHours";
+sdmx-attribute:unitMeasure unit:HR .
+<https://w3id.org/cybele/component/id/openSeaFishing__fishingDays> a qb:DimensionProperty;
+rdfs:comment "The total days of fishing during the fishing trip";
+rdfs:range xsd:double;
+rdfs:label "openSeaFishing__fishingDays" .
+<https://w3id.org/cybele/component/id/openSeaFishing__tripStartDate> a qb:DimensionProperty;
+rdfs:comment "The start date of the fishing trip (the startpoint can be at sea, not in the port).";
+rdfs:range xsd:dateTime;
+rdfs:label "openSeaFishing__tripStartDate" .
+<https://w3id.org/cybele/component/id/openSeaFishing__tripEndDate> a qb:DimensionProperty;
+rdfs:comment "The end date of the fishing trip (the endpoint can be at sea, not in the port).";
+rdfs:range xsd:dateTime;
+rdfs:label "openSeaFishing__tripEndDate" .
+<https://w3id.org/cybele/component/id/openSeaFishing__catchID> rdfs:comment "The identification number of a tow.";
+a qb:DimensionProperty;
+rdfs:range xsd:string;
+rdfs:label "openSeaFishing__catchID" .
+<https://w3id.org/cybele/component/id/openSeaFishing__processingDateTime> a qb:DimensionProperty;
+rdfs:comment "The timestamp of first waying on the scale. Used to determine end of catch (haul).";
+rdfs:range xsd:dateTime;
+rdfs:label "openSeaFishing__processingDateTime" .
+<https://w3id.org/cybele/component/id/openSeaFishing__GPSTimestamp> a qb:DimensionProperty;
+rdfs:comment "The GPS timestamp of the catch.";
+rdfs:range xsd:dateTime;
+rdfs:label "openSeaFishing__GPSTimestamp" .
+<https://w3id.org/cybele/component/id/openSeaFishing__latitude> a qb:DimensionProperty;
+rdfs:comment "The latitude of the vessel.";
+rdfs:range xsd:double;
+rdfs:label "openSeaFishing__latitude" .
+<https://w3id.org/cybele/component/id/openSeaFishing__longitude> a qb:DimensionProperty;
+rdfs:comment "The longitude of the vessel.";
+rdfs:range xsd:string;
+rdfs:label "openSeaFishing__longitude" .
+<https://w3id.org/cybele/component/id/openSeaFishing__haulDateTime> a qb:DimensionProperty;
+rdfs:comment "The timestamp of haul (end of tow).";
+rdfs:range xsd:dateTime;
+rdfs:label "openSeaFishing__haulDateTime" .
+<https://w3id.org/cybele/component/id/openSeaFishing__haulLatitude> a qb:DimensionProperty;
+rdfs:comment "The latitude of haul (end of tow).";
+rdfs:range xsd:string;
+rdfs:label "openSeaFishing__haulLatitude" .
+<https://w3id.org/cybele/component/id/openSeaFishing__haulLongitude> a qb:DimensionProperty;
+rdfs:comment "The longitude of haul (end of tow).";
+rdfs:label "openSeaFishing__haulLongitude";
+rdfs:range xsd:string .
+<https://w3id.org/cybele/component/id/openSeaFishing__shootDateTime> rdfs:comment "The timestamp of shoot (start of tow).";
+a qb:DimensionProperty;
+rdfs:range xsd:dateTime;
+rdfs:label "openSeaFishing__shootDateTime" .
+<https://w3id.org/cybele/component/id/openSeaFishing__shootLatitude> a qb:DimensionProperty;
+rdfs:comment "The latitude of shoot (start of tow).";
+rdfs:range xsd:string;
+rdfs:label "openSeaFishing__shootLatitude" .
+<https://w3id.org/cybele/component/id/openSeaFishing__shootLongitude> a qb:DimensionProperty;
+rdfs:comment "The longitude of shoot (start of tow).";
+rdfs:range xsd:string;
+rdfs:label "openSeaFishing__shootLongitude" .
+<https://w3id.org/cybele/component/id/openSeaFishing__relatedFishingTrip> rdfs:comment "The related fishing trips details.";
+rdfs:label "openSeaFishing__relatedFishingTrip";
+rdfs:range xsd:string;
+a qb:DimensionProperty .
+<https://w3id.org/cybele/component/id/openSeaFishing__referenceTime> a qb:DimensionProperty;
+rdfs:comment "A specific time of an event.";
+rdfs:range xsd:dateTime;
+rdfs:label "openSeaFishing__referenceTime" .
+<https://w3id.org/cybele/component/id/openSeaFishing__vesselSpeed> rdfs:comment "The current vessel speed.";
+a qb:MeasureProperty;
+rdfs:range xsd:double;
+rdfs:label "openSeaFishing__vesselSpeed";
+sdmx-attribute:unitMeasure unit:MI-PER-HR .
+<https://w3id.org/cybele/component/id/openSeaFishing__vesselEnginePower> rdfs:label "openSeaFishing__vesselEnginePower";
+a qb:MeasureProperty;
+rdfs:comment "The engine power of the vessel.";
+rdfs:range xsd:double .
+<https://w3id.org/cybele/component/id/fishingTrip__departureDate> a qb:DimensionProperty;
+rdfs:comment "The departure date of the fishing trip (from the port).";
+rdfs:range xsd:dateTime;
+rdfs:label "fishingTrip__departureDate" .
+<https://w3id.org/cybele/component/id/fishingTrip__returnDate> a qb:DimensionProperty;
+rdfs:comment "The return date of the fishing trip (to the port).";
+rdfs:range xsd:dateTime;
+rdfs:label "fishingTrip__returnDate" .
+<https://w3id.org/cybele/component/id/fishingTrip__departurePort> rdfs:label "fishingTrip__departurePort";
+a qb:DimensionProperty;
+rdfs:comment "The departure port of the fishing trip.";
+rdfs:range xsd:string .
+<https://w3id.org/cybele/component/id/fishingTrip__returnPort> a qb:DimensionProperty;
+rdfs:comment "The return port of the fishing trip.";
+rdfs:range xsd:string;
+rdfs:label "fishingTrip__returnPort" .
+<https://w3id.org/cybele/component/id/fishingTrip__returnYear> a qb:DimensionProperty;
+rdfs:comment "The return year of the fishing trip.";
+rdfs:range xsd:int;
+rdfs:label "fishingTrip__returnYear" .
+<https://w3id.org/cybele/component/id/fishingTrip__returnMonth> a qb:DimensionProperty;
+rdfs:comment "The return month of the fishing trip.";
+rdfs:range xsd:string;
+rdfs:label "fishingTrip__returnMonth" .
+<https://w3id.org/cybele/component/id/fishingTrip__vesselCountryCode> a qb:DimensionProperty;
+rdfs:comment "The country code of the fishing vessel.";
+rdfs:range xsd:string;
+rdfs:label "fishingTrip__vesselCountryCode" .
+<https://w3id.org/cybele/component/id/fishingTrip__vesselFleetSegment> rdfs:comment "The fleet segment where the fishing vessel belongs to.";
+rdfs:range xsd:string;
+a qb:DimensionProperty;
+rdfs:label "fishingTrip__vesselFleetSegment" .
+<https://w3id.org/cybele/component/id/fishingTrip__vesselLengthCategory> a qb:DimensionProperty;
+rdfs:comment "The length category where the fishing vessel belongs to.";
+rdfs:range xsd:string;
+rdfs:label "fishingTrip__vesselLengthCategory" .
+<https://w3id.org/cybele/component/id/fishingTrip__vesselGrossTonage> rdfs:comment "The gross tonage of the fishing vessel.";
+a qb:MeasureProperty;
+rdfs:range xsd:double;
+rdfs:label "fishingTrip__vesselGrossTonage";
+sdmx-attribute:unitMeasure unit:TONNE .
+<https://w3id.org/cybele/component/id/fishingTrip__vesselGearTypeCode> a qb:DimensionProperty;
+rdfs:comment "The gear type code of the fishing vessel.";
+rdfs:range xsd:string;
+rdfs:label "fishingTrip__vesselGearTypeCode" .
+<https://w3id.org/cybele/component/id/fishingTrip__vesselGearTypeDescription> a qb:DimensionProperty;
+rdfs:comment "The description of the gear type of the fishing vessel.";
+rdfs:range xsd:string;
+rdfs:label "fishingTrip__vesselGearTypeDescription" .
+<https://w3id.org/cybele/component/id/fishingTrip__fishingTargetCode> a qb:DimensionProperty;
+rdfs:comment "The target code of fish intended to be caught in the fishing trip.";
+rdfs:range xsd:string;
+rdfs:label "fishingTrip__fishingTargetCode" .
+<https://w3id.org/cybele/component/id/fishingTrip__fishingTargetDescription> a qb:DimensionProperty;
+rdfs:comment "The description of the target fish intended to be caught in the fishing trip.";
+rdfs:range xsd:string;
+rdfs:label "fishingTrip__fishingTargetDescription" .
+<https://w3id.org/cybele/component/id/fishingTrip__relatedFishingSale> a qb:DimensionProperty;
+rdfs:comment "The related fishing sales details.";
+rdfs:range xsd:string;
+rdfs:label "fishingTrip__relatedFishingSale" .
+<https://w3id.org/cybele/component/id/fishingTrip__departureTime> a qb:DimensionProperty;
+rdfs:comment "The departure time of the fishing trip (from the port).";
+rdfs:range xsd:dateTime;
+rdfs:label "fishingTrip__departureTime" .
+<https://w3id.org/cybele/component/id/fishingTrip__returnTime> a qb:DimensionProperty;
+rdfs:comment "The return time of the fishing trip (to the port).";
+rdfs:range xsd:dateTime;
+rdfs:label "fishingTrip__returnTime" .
+<https://w3id.org/cybele/component/id/fishingTrip__landingWeight> sdmx-attribute:unitMeasure unit:KiloGM;
+rdfs:label "fishingTrip__landingWeight";
+a qb:MeasureProperty;
+rdfs:comment "The weight of the landings of a fish species.";
+rdfs:range xsd:double .
+<https://w3id.org/cybele/component/id/fishingSale__saleID> rdfs:label "fishingSale__saleID";
+a qb:DimensionProperty;
+rdfs:comment "The identification number of the fishing sale.";
+rdfs:range xsd:string .
+<https://w3id.org/cybele/component/id/fishingSale__saleDate> rdfs:comment "The date of the fishing sale.";
+rdfs:range xsd:dateTime;
+a qb:DimensionProperty;
+rdfs:label "fishingSale__saleDate" .
+<https://w3id.org/cybele/component/id/fishingSale__saleYear> a qb:DimensionProperty;
+rdfs:comment "The year of the fishing sale.";
+rdfs:range xsd:int;
+rdfs:label "fishingSale__saleYear" .
+<https://w3id.org/cybele/component/id/fishingSale__saleMonth> a qb:DimensionProperty;
+rdfs:comment "The month of the fishing sale.";
+rdfs:range xsd:string;
+rdfs:label "fishingSale__saleMonth" .
+<https://w3id.org/cybele/component/id/fishingSale__FAOCode> a qb:DimensionProperty;
+rdfs:comment "The FAO code of the fishing species that is for sale.";
+rdfs:range xsd:string;
+rdfs:label "fishingSale__FAOCode" .
+<https://w3id.org/cybele/component/id/fishingSale__scientificName> a qb:DimensionProperty;
+rdfs:comment "The scientific name of the fishing species that is for sale.";
+rdfs:range xsd:string;
+rdfs:label "fishingSale__scientificName" .
+<https://w3id.org/cybele/component/id/fishingSale__fishingName> rdfs:label "fishingSale__fishingName";
+a qb:DimensionProperty;
+rdfs:comment "The name of the fishing species that is for sale. It may appear multiple times for additional names in different languages.";
+rdfs:range xsd:string .
+<https://w3id.org/cybele/component/id/fishingSale__sizeCategory> a qb:DimensionProperty;
+rdfs:comment "The size category of the fishing species that is for sale.";
+rdfs:range xsd:string;
+rdfs:label "fishingSale__sizeCategory" .
+<https://w3id.org/cybele/component/id/fishingSale__landingPortCode> a qb:DimensionProperty;
+rdfs:comment "The code of the landing port of the fishing trip.";
+rdfs:range xsd:string;
+rdfs:label "fishingSale__landingPortCode" .
+<https://w3id.org/cybele/component/id/fishingSale__landingCountryCode> a qb:DimensionProperty;
+rdfs:comment "The code of the landing country of the fishing trip.";
+rdfs:range xsd:string;
+rdfs:label "fishingSale__landingCountryCode" .
+<https://w3id.org/cybele/component/id/fishingSale__salePortCode> a qb:DimensionProperty;
+rdfs:comment "The code of the port where the fishing sale took place.";
+rdfs:range xsd:string;
+rdfs:label "fishingSale__salePortCode" .
+<https://w3id.org/cybele/component/id/fishingSale__saleCountryCode> rdfs:comment "The code of the country where the fishing sale took place.";
+a qb:DimensionProperty;
+rdfs:range xsd:string;
+rdfs:label "fishingSale__saleCountryCode" .
+<https://w3id.org/cybele/component/id/fishingSale__saleWeight> rdfs:comment "The weight of the fishing sold.";
+a qb:MeasureProperty;
+rdfs:range xsd:double;
+rdfs:label "fishingSale__saleWeight";
+sdmx-attribute:unitMeasure unit:KiloGM .
+<https://w3id.org/cybele/component/id/fishingSale__saleTotalValue> a qb:MeasureProperty;
+rdfs:comment "The total value of the fishing sold.";
+rdfs:range xsd:double;
+rdfs:label "fishingSale__saleTotalValue";
+sdmx-attribute:unitMeasure unit:Euro .
+<https://w3id.org/cybele/component/id/fishingSale__saleKiloPrice> a qb:MeasureProperty;
+rdfs:comment "The price per kilo of the fishing for sale.";
+rdfs:range xsd:double;
+rdfs:label "fishingSale__saleKiloPrice";
+sdmx-attribute:unitMeasure unit:Euro .
+<https://w3id.org/cybele/component/id/fishingSale__logbookRecordDate> rdfs:label "fishingSale__logbookRecordDate";
+a qb:DimensionProperty;
+rdfs:comment "The date of the record in the logbook.";
+rdfs:range xsd:dateTime .
+<https://w3id.org/cybele/component/id/foodRecallAnnouncement__recallID> a qb:DimensionProperty;
+rdfs:comment "The identification number of the food recall announcement record.";
+rdfs:range xsd:int;
+rdfs:label "foodRecallAnnouncement__recallID" .
+<https://w3id.org/cybele/component/id/foodRecallAnnouncement__product> rdfs:comment "The product related with the food recall announcement.";
+rdfs:range xsd:string;
+a qb:DimensionProperty;
+rdfs:label "foodRecallAnnouncement__product" .
+<https://w3id.org/cybele/component/id/foodRecallAnnouncement__description> a qb:DimensionProperty;
+rdfs:comment "The description of the food recall announcement.";
+rdfs:range xsd:string;
+rdfs:label "foodRecallAnnouncement__description" .
+<https://w3id.org/cybele/component/id/foodRecallAnnouncement__title> a qb:DimensionProperty;
+rdfs:comment "The title of the food recall announcement.";
+rdfs:range xsd:string;
+rdfs:label "foodRecallAnnouncement__title" .
+<https://w3id.org/cybele/component/id/foodRecallAnnouncement__productCategory> a qb:DimensionProperty;
+rdfs:comment "The category of the product related with the food recall announcement.";
+rdfs:range xsd:string;
+rdfs:label "foodRecallAnnouncement__productCategory" .
+<https://w3id.org/cybele/component/id/foodRecallAnnouncement__relatedFoodIncidence> a qb:DimensionProperty;
+rdfs:comment "The related food incidence of the announcement.";
+rdfs:range xsd:string;
+rdfs:label "foodRecallAnnouncement__relatedFoodIncidence" .
+<https://w3id.org/cybele/component/id/foodIncidence__foodIncidenceID> a qb:DimensionProperty;
+rdfs:comment "The identification number of the food incidence.";
+rdfs:range xsd:int;
+rdfs:label "foodIncidence__foodIncidenceID" .
+<https://w3id.org/cybele/component/id/foodIncidence__productCategory> a qb:DimensionProperty;
+rdfs:comment "The category of the product related with the food incidence.";
+rdfs:range xsd:string;
+rdfs:label "foodIncidence__productCategory" .
+<https://w3id.org/cybele/component/id/foodIncidence__stringDate> a qb:DimensionProperty;
+rdfs:comment "The date of the food incidence in a string format.";
+rdfs:range xsd:string;
+rdfs:label "foodIncidence__stringDate" .
+<https://w3id.org/cybele/component/id/foodIncidence__date> a qb:DimensionProperty;
+rdfs:comment "The date of the food incidence in a datetime format.";
+rdfs:range xsd:dateTime;
+rdfs:label "foodIncidence__date" .
+<https://w3id.org/cybele/component/id/foodIncidence__incidencesNumber> a qb:MeasureProperty;
+rdfs:comment "The number of food incidences that have happened in the specific date.";
+rdfs:range xsd:int;
+rdfs:label "foodIncidence__incidencesNumber" .
