@@ -28,4 +28,4 @@ From a Dataset perspective the above main classes are related to the Dataset. So
 Regarding the other classes: i) the Dataset Distribution has properties including the License, Format, Size and Download URL, ii) the Data Service and Database has properties related to the access URL (Connection URL and Endpoint URL respectively), iii) the Measure has properties that define the Unit of measure and the Measure Range and iv) the Dimensions has a property for the Range.
 
 
-<img src="/images/model_matching.jpg"  width="800" >
+<img src="/images/model_cybele.jpg"  width="800" >
