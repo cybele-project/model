@@ -18,7 +18,7 @@
 <http://w3id.org/cybele/model> rdf:type owl:Ontology ;
                             ### TODO: Update on release
                             owl:versionIRI <https://gitlab.res.eng.it/cybele/cybele-common-semantic-model/raw/master/cybele-semantic-model.ttl> ;
-                            owl:versionInfo "1.1" ;
+                            owl:versionInfo "3.0" ;
                             dct:modified "2020-07-30T12:00:00Z"^^xsd:dateTime ;
                             ### end TODO
                             dct:issued "2019-08-30T12:00:00Z"^^xsd:dateTime ;
@@ -319,11 +319,11 @@ cybele:accessDatabase rdf:type owl:ObjectProperty ;
   								 rdfs:range cybele:Database ;
   								 rdfs:isDefinedBy <http://w3id.org/cybele/model> .
   								 
-###  http://w3id.org/cybele/model#accessTable
-cybele:accessTable rdf:type owl:ObjectProperty ;
-									 rdfs:label "accessTable"@en;
+###  http://w3id.org/cybele/model#accessStructure
+cybele:accessStructure rdf:type owl:ObjectProperty ;
+									 rdfs:label "accessStructure"@en;
 									 rdfs:domain cybele:Database;
-  								 rdfs:range cybele:Table ;
+  								 rdfs:range cybele:QueryableStructure ;
   								 rdfs:isDefinedBy <http://w3id.org/cybele/model> .  								             
 
 #################################################################
@@ -533,11 +533,18 @@ cybele:Database rdf:type owl:Class ;
                    rdfs:subClassOf [ a owl:Restriction ; owl:minCardinality "1"^^xsd:nonNegativeInteger ; owl:onProperty cybele:connectionString ] ; 
   								 rdfs:isDefinedBy <http://w3id.org/cybele/model> .
   								 
+  								 
+###  http://w3id.org/cybele/model#QueryableStructure
+cybele:QueryableStructure rdf:type owl:Class ;
+									 rdfs:label "QueryableStructure"@en;
+                   rdfs:subClassOf [ a owl:Restriction ; owl:cardinality "1"^^xsd:nonNegativeInteger ; owl:onProperty dct:subject ] ; 
+  								 rdfs:isDefinedBy <http://w3id.org/cybele/model> .  								 
+  								 
 ###  http://w3id.org/cybele/model#Table
 cybele:Table rdf:type owl:Class ;
 									 rdfs:label "Table"@en;
-                   rdfs:subClassOf [ a owl:Restriction ; owl:cardinality "1"^^xsd:nonNegativeInteger ; owl:onProperty cybele:tableName ] ; 
-                   rdfs:subClassOf [ a owl:Restriction ; owl:cardinality "1"^^xsd:nonNegativeInteger ; owl:onProperty dct:subject ] ; 
+									 rdfs:subClassOf cybele:QueryableStructure ;
+                   rdfs:subClassOf [ a owl:Restriction ; owl:cardinality "1"^^xsd:nonNegativeInteger ; owl:onProperty cybele:tableName ] ;                    
   								 rdfs:isDefinedBy <http://w3id.org/cybele/model> .  								 
                      
 #################################################################

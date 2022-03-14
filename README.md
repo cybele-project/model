@@ -1,4 +1,4 @@
-# CYBELE Common Semantic Model v2.0
+# CYBELE Common Semantic Model v3.0
 
 The CYBELE Semantic Model will serve as a common reference model (Figure 21) for the semantic annotation and sharing of data including sensor data, satellite and aerial image data, statistical data, streaming data, video data, weather & climate data, supporting the on-demand discovery and exploration.  This semantic model will be utilized in the semantic annotation, sharing and inter-connection of CYBELE datasets. In particular, it will be used to create metadata for the datasets (e.g. data theme, spatial/temporal coverage, data format, periodicity, licence). The semantic annotation of the data will facilitate:
 
@@ -14,6 +14,11 @@ The CYBELE Common Semantic Model will serve as a common reference model for the 
 
 The design and implementation of the model is based on: i) the first version of the model described at D3.1, ii) the updated user stories and demonstrators’ requirements (functional and non-functional) documented in deliverable D1.2 and D1.3, iii) the new objectives of the model i.e. add cardinalities at the model, propose a set of code lists to be used with the model, define aspects related to the governance of the model and define an application profile of the model and iv) feedback received by the project’s demonstrators. The user stories and the requirements are further analysed and specialized for the needs of this deliverable. Additionally, the design of the CYBELE Common Semantic Model re-uses existing models and vocabularies such as DCAT, StatDCAT, GeoDATC, INSPIRE, SSN ontology, QB vocabulary and PROV-O. An application profile of the model is also defined to cover the needs of the agriculture and livestock farming domains.
 
+### Files
+- 'cybele-semantic-model.ttl' is the CYBELE semantic model code 
+- 'CYBELE-dims_measures_PA_PLF.ttl' is a set of common dimensions/measures used for the data alignment
+- 'images/model_v3.jpg' is the latest diagram showing the main classes and properties of the CYBELE semantic model
+
 ### Model description
 
 The main classes of the model are:
@@ -28,4 +33,4 @@ From a Dataset perspective the above main classes are related to the Dataset. So
 Regarding the other classes: i) the Dataset Distribution has properties including the License, Format, Size and Download URL, ii) the Data Service and Database has properties related to the access URL (Connection URL and Endpoint URL respectively), iii) the Measure has properties that define the Unit of measure and the Measure Range and iv) the Dimensions has a property for the Range.
 
 
-<img src="/images/model_cybele.jpg"  width="800" >
+<img src="/images/model_v3.jpg"  width="800" >
